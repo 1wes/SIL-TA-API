@@ -11,7 +11,10 @@ const photos = require('./routes/photos');
 // global middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({}));
+app.use(cors({
+    origin:origin,
+    credentials:true
+}));
 
 app.use("/api", albums);
 app.use("/api", users);

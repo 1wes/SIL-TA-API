@@ -13,4 +13,14 @@ router.get(`/albums`, (req, res) => {
     res.send(albums)
 });
 
+router.get("/albums/:id", (req, res) => {
+    
+    var albumId = parseInt(req.params.id);
+
+    const album = albums.find(album =>
+        album.id === albumId);
+        
+    album ? res.send(album) : res.send("");
+})
+
 module.exports = router;

@@ -13,4 +13,14 @@ router.get("/photos", (req, res) => {
     res.send(photos)
 });
 
+router.get("/photos/:albumId", (req, res) => {
+    
+    const albumId = parseInt(req.params.albumId);
+
+    const photosList = photos.filter((photos) =>
+        photos.albumId === albumId)
+    
+    photosList ? res.send(photosList) : res.send([]);
+})
+
 module.exports = router;

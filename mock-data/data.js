@@ -114,7 +114,7 @@ const users=[
     {"id": 100, "userId": 10, "title": "Enim Repellat Iste"}
   ]
 
-const photos=[
+var photos=[
     {
        "albumId":1,
        "id":1,

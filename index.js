@@ -12,7 +12,7 @@ const photos = require('./routes/photos');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin:[origin, "http://localhost:5173", "http://localhost:3000", "https://1wes.github.io"],
+    origin:[origin, "http://localhost:5173", "http://localhost:3000", "https://1wes.github.io", "https://sil-frontend.onrender.com"],
     credentials:true
 }));
 
